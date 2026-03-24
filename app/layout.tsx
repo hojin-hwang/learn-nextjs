@@ -1,9 +1,16 @@
-export const metadata = {
-	title: 'Next.js Study',
+import '../styles/global.css'
+import { Metadata } from "next";
+import Navigation from "../components/navigation";
+
+
+export const metadata:Metadata = {
+	title: {
+    template: '%s | Next.js Study us Metadata',
+    default: 'Next.js Movies',
+  },
 	description: 'A simple Next.js application',
 }
 
-import Navigation from "../components/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 return (
